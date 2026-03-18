@@ -1,23 +1,47 @@
 #include <stdio.h>
 #include <stdlib.h>
 
-int a = 1;
+// int a = 1;
 
-int funcion(){
-    int a = 2;
-    printf("%d \n",a);
-    return 0;
-}
+// int funcion(){
+//     int a = 2;
+//     printf("%d \n",a);
+//     return 0;
+// }
 
-int factorial(int num){
-    int res = 1;
-    while(num != 0){
-        res = res * num;
-        num--;
-    }
-    return res;
-}
-
+// int factorial(int num){
+//     int res = 1;
+//     while(num != 0){
+//         res = res * num;
+//         num--;
+//     }
+//     return res;
+// }
+// int g = 10;
+// void functionA() {
+//     int a = 20;
+//     static int b = 30;
+//     printf("Dentro de functionA:\n");
+//     printf(" g = %d\n", g);
+//     printf(" a = %d\n", a);
+//     printf(" b = %d\n", b);
+//     // Modificaci´on de las variables
+//     g += 5;
+//     a += 10;
+//     b += 5; 
+// }
+// void functionB() {
+//     int a = 40;
+//     static int c = 50;
+//     printf("\nDentro de functionB:\n");
+//     printf(" g = %d\n", g);
+//     printf(" a = %d\n", a);
+//     printf(" c = %d\n", c);
+//     // Modificaci´on de las variables
+//     g += 5;
+//     a += 10;
+//     c += 5;
+// }
 
 int main() {
     // ej 1
@@ -196,13 +220,22 @@ int main() {
     // printf("%d \n",a);
 
     // ejercicio 15
-    int n;
-    printf("Ingrese un numero: ");
-    scanf("%d", &n);
-    int fac = factorial(n);
-    printf("el factorial es %d \n", fac);
+    // int n;
+    // printf("Ingrese un numero: ");
+    // scanf("%d", &n);
+    // int fac = factorial(n);
+    // printf("el factorial es %d \n", fac);
+
+    // Ejercicio 19
+    // printf("Dentro de main:\n");
+    // printf(" g = %d\n", g);
+    // functionA();
+    // functionB();
+    // functionA();
+    // functionB();
+    // printf("\nFinal en main:\n");
+    // printf(" g = %d\n", g);
 
 
-    
     return 0;
 }
