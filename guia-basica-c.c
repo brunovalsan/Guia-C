@@ -236,6 +236,5 @@ int main() {
     // printf("\nFinal en main:\n");
     // printf(" g = %d\n", g);
 
-
     return 0;
 }
