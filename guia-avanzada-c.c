@@ -1,6 +1,7 @@
 #define LEN_ARR_MONSTRUOS 3
 #include <stdio.h>
 #include <string.h>
+#include <stdlib.h>
 
 // typedef struct {
 //     char* nombre;
@@ -21,6 +22,46 @@
 //     monstruo_nuevo.defensa += 10;
 //     return monstruo_nuevo;
 // }
+// typedef struct{
+//         char* nombre;
+//         int edad;
+//     } persona_t;
+
+// persona_t* crearPersona(char* nombre, int edad){
+//         // void* malloc(size_t size);
+//         // este malloc reserva memoria para el puntero al nombre y para la edad
+//         // este malloc NO reserva memoria para el nombre, sino que reserva memoria para el PUNTERO AL NOMBRE
+//         persona_t* persona = malloc(sixeof(persona_t)); // malloc(sizeof(nombre)+ sizeof(int));
+        
+//         // persona->nombre = nombre // cuando es un puntero se usa ->, no persona.nombre = nombre;
+//         //  Esto es equivalente a (*puntero).atributo
+//         // reservamos espacio dependiendo la longitud del nombre!!!
+//         persona->nombre = malloc(strlen(nombre) + 1); // +1 por '\0'
+
+//         // para hacer una copia del string usamos lo visto de strings
+//         strcpy(persona->nombre, nombre);
+//         persona->edad = edad // cuando es un puntero se usa ->, no persona.edad = edad; Esto es equivalente a (*puntero).atributo
+        
+//         return persona;
+//     }
+
+// persona_t* persona_creada = crearPersona("bruno", 21);
+//     // void free(void* ptr);
+
+// void eliminarPersona(persona_t* persona){
+//         free(persona_creada);
+//         free(persona);
+//     }
+
+// Ejercicio 18
+    // void allocateArray(int *arr, int size, int value) { 
+    //     // Recibimos un puntero a un array, el lenght y un valor
+    //     arr = (int*)malloc(size * sizeof(int)); 
+    //     // El puntero al array recibido le asignamos otra direccion, reservando lugar para todo el array 
+    //     if(arr != NULL) { // Manejo error
+    //         for(int i=0; i<size; i++) { arr[i] = value; } // pongo el valor recibido en cada pos del array
+    //     }
+    // }
 
 int main() {
     // Ejercicio 1
@@ -56,7 +97,33 @@ int main() {
     // printf("Tu palabra en mayusculas es: %s \n", word);
     // return 0;
  
-    // Ejercicio 10 - Practicando funciones de strings
+    
 
- 
+    // Uso de ej 18
+    // int *vector = NULL;
+    // allocateArray(vector,5,45); 
+    // for(int i = 0; i < 5; i++)
+    //     printf("%d\n", vector[i]);
+    // free(vector);
+    
+    // return 0;
+
+    // Ejercicio 19
+    int matrix[3][4] = {
+        {1, 2, 3, 4},
+        {5, 6, 7, 8},
+        {9, 10, 11, 12}
+    };
+    // p apunta al int en la fila 0, columna 0
+    int *p = &matrix[0][0];
+
+    // Reinterpretamos a la matriz como bloques de 2, sin perder informacion --> reshape = {{1,2},{3,4}, ..., {11,12}};
+    int (*reshape)[2] = (int (*)[2]) p;
+
+    printf("%d\n", p[3]); // Qu´e imprime esta l´ınea?
+    printf("%d\n", reshape[1][1]); // Qu´e imprime esta l´ınea? 
+    return 0;
+
+
+
 }
