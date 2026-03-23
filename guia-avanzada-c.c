@@ -63,6 +63,12 @@
     //     }
     // }
 
+// void contarHasta(int hasta){
+//     for(int i = 0; i < hasta; i++){
+//     printf("%d\n", i);
+//     }
+// }
+
 int main() {
     // Ejercicio 1
     
@@ -109,19 +115,22 @@ int main() {
     // return 0;
 
     // Ejercicio 19
-    int matrix[3][4] = {
-        {1, 2, 3, 4},
-        {5, 6, 7, 8},
-        {9, 10, 11, 12}
-    };
-    // p apunta al int en la fila 0, columna 0
-    int *p = &matrix[0][0];
+    // int matrix[3][4] = {
+    //     {1, 2, 3, 4},
+    //     {5, 6, 7, 8},
+    //     {9, 10, 11, 12}
+    // };
+    // // p apunta al int en la fila 0, columna 0
+    // int *p = &matrix[0][0];
 
-    // Reinterpretamos a la matriz como bloques de 2, sin perder informacion --> reshape = {{1,2},{3,4}, ..., {11,12}};
-    int (*reshape)[2] = (int (*)[2]) p;
+    // // Reinterpretamos a la matriz como bloques de 2, sin perder informacion --> reshape = {{1,2},{3,4}, ..., {11,12}};
+    // int (*reshape)[2] = (int (*)[2]) p;
 
-    printf("%d\n", p[3]); // Qu´e imprime esta l´ınea?
-    printf("%d\n", reshape[1][1]); // Qu´e imprime esta l´ınea? 
+    // printf("%d\n", p[3]); // Qu´e imprime esta l´ınea?
+    // printf("%d\n", reshape[1][1]); // Qu´e imprime esta l´ınea? 
+
+    // contarHasta(10);
+
     return 0;
 
 
